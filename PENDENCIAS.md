@@ -48,6 +48,21 @@ essas marcações, para apresentar o site sem elas.
     autoestima, segurança, função e um pouco mais de vontade de viver."
     (legenda de publicação)
 
+## 2b. Texto — decisões da Dra. Marina
+
+- **Como ela quer ser chamada no site.** Hoje: "Dra. Marina Vale" na primeira
+  menção de cada seção e "Dra. Marina" depois.
+- **"paciente" ou outra palavra?** O site usa "paciente"; algumas profissionais
+  preferem falar sempre em segunda pessoa ("você").
+- **Próteses sobre implantes**: o texto diz "em parceria com a equipe
+  responsável pela etapa cirúrgica". Decidir se o cirurgião parceiro deve ser
+  nomeado (Dr. Carlos Eduardo Fernandes, CRO-RJ 44534, nas publicações dela).
+- **Títulos dos casos** "Naturalidade" e "Transformação do sorriso" não nomeiam
+  procedimento, porque as legendas originais também não nomeavam. Se ela
+  confirmar o que foi feito, dá para trocar por algo mais preciso.
+- **Frase de abertura**: "Seu sorriso merece cuidado em cada detalhe."
+- As duas citações no site são palavras dela, copiadas da bio e de uma legenda.
+
 ## 3. Imagens
 
 - **Retrato profissional em alta resolução.** O do site foi recortado de uma
