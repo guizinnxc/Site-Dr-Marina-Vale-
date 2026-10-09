@@ -52,7 +52,8 @@ essas marcações, para apresentar o site sem elas.
 
 - **Retrato profissional em alta resolução.** O do site foi recortado de uma
   publicação (970 × 770 px) — serve para apresentar, mas é pouco para telas
-  retina e impressão.
+  retina e impressão. Ao trocar, rode `python _ferramentas/otimizar-imagens.py`
+  para gerar de novo o par `.webp` + `.jpg`.
 - **Fotos do consultório** — a galeria tem 3 espaços reservados
   (recepção, sala de atendimento, detalhe do espaço).
 - **Logo**, se vier a ser criado. Enquanto isso o site usa uma assinatura
@@ -63,12 +64,20 @@ essas marcações, para apresentar o site sem elas.
 
 ## 4. Decisões
 
-- **Seção de resultados (antes e depois): não foi incluída.** Existem fotos
-  clínicas boas no perfil, mas publicá-las no site exige
-  (a) autorização por escrito dos pacientes para uso no site, e
-  (b) conferir as regras de publicidade do CFO / CRO-RJ para esse tipo de
-  imagem. Confirmando os dois pontos, a seção é rápida de montar.
-- **Depoimentos**: mesma regra — só com material real e autorizado.
+- **Seção de resultados (antes e depois): está no ar, com três casos.**
+  As imagens vieram de publicações da própria Dra. Marina, em que ela assina
+  como cirurgiã-dentista responsável (uma delas registra "foto autorizada pelo
+  paciente"). São fotos só da boca, sem rosto. Ainda assim, antes de publicar:
+  1. **autorização por escrito dos pacientes para uso no site** (a do Instagram
+     não vale automaticamente para outro meio);
+  2. **conferir as regras de publicidade do CFO / CRO-RJ** para imagens de antes
+     e depois.
+  Se algum dos dois pontos não se confirmar, basta apagar a seção
+  `<section id="resultados">` do `index.html` e o item "Resultados" dos menus.
+- **Textos dos três casos**: foram escritos a partir das legendas dela e
+  precisam de revisão — principalmente os títulos "Naturalidade" e
+  "Transformação do sorriso", que não nomeiam procedimento.
+- **Depoimentos**: ainda não existem no site — só com material real e autorizado.
 - **Creditar parceiros** (por exemplo, o cirurgião responsável pela etapa
   cirúrgica nos casos de protocolo) — decidir se entra no site.
 - **Domínio e hospedagem.** O site é estático: funciona em qualquer hospedagem
@@ -85,4 +94,5 @@ essas marcações, para apresentar o site sem elas.
   e horários — hoje ele traz só o que está confirmado.
 - Definir a URL do site e deixar `og:image` como endereço absoluto
   (hoje é um caminho relativo).
-- Gerar versões `.webp` das fotos finais, se a hospedagem permitir.
+- Ligar a compressão gzip/brotli na hospedagem: o HTML, o CSS e o JS caem de
+  93 KB para 20 KB. Quase toda hospedagem já faz isso por padrão.

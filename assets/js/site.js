@@ -114,7 +114,7 @@
     });
 
     // se a tela crescer, o menu não deve continuar aberto
-    var telaGrande = window.matchMedia('(min-width: 900px)');
+    var telaGrande = window.matchMedia('(min-width: 1000px)');
     var aoMudarTela = function (e) { if (e.matches && !painel.hidden) fecharMenu(false); };
     if (telaGrande.addEventListener) telaGrande.addEventListener('change', aoMudarTela);
     else if (telaGrande.addListener) telaGrande.addListener(aoMudarTela);

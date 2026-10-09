@@ -1,0 +1,6 @@
+# configuração local do editor/assistente
+.claude/
+
+# artefatos do Windows
+Thumbs.db
+desktop.ini

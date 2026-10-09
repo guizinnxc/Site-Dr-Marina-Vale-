@@ -4,6 +4,32 @@
    Escrito mobile-first.
    ========================================================= */
 
+/* ---------- 0. Fontes (hospedadas no próprio site) ---------- */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url('../fonts/cormorant-garamond-variavel.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/cormorant-garamond-italico.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('../fonts/nunito-sans-variavel.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ---------- 1. Variáveis ---------- */
 :root {
   --marfim: #faf8f5;
@@ -33,7 +59,7 @@
   --altura-cabecalho: 68px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   :root { --altura-cabecalho: 80px; }
 }
 
@@ -324,7 +350,7 @@ html.sem-pendencias .pendente-bloco { display: none !important; }
 
 .navegacao { display: none; }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   .navegacao {
     display: flex;
     align-items: center;
@@ -393,7 +419,7 @@ html.sem-pendencias .pendente-bloco { display: none !important; }
   background: var(--vinho);
   border-radius: 2px;
 }
-@media (min-width: 900px) { .menu-botao { display: none; } }
+@media (min-width: 1000px) { .menu-botao { display: none; } }
 
 /* ---------- 7. Menu móvel ---------- */
 .menu-movel {
@@ -1103,7 +1129,7 @@ body.sem-rolagem { overflow: hidden; }
 }
 .whatsapp-fixo.visivel { opacity: 1; transform: none; pointer-events: auto; }
 
-@media (min-width: 900px) { .whatsapp-fixo { display: none !important; } }
+@media (min-width: 1000px) { .whatsapp-fixo { display: none !important; } }
 
 /* ---------- 18. Entrada discreta dos blocos ---------- */
 @media (prefers-reduced-motion: no-preference) {
@@ -1289,4 +1315,90 @@ body { -webkit-tap-highlight-color: rgba(99, 61, 71, .1); }
 @media (min-width: 1000px) {
   /* fica na coluna da lista: a coluna da esquerda guarda a introdução fixa */
   .tratamentos__extra { grid-column: 2; margin-top: .5rem; }
+}
+
+/* ---------- 26. Resultados (casos reais) ---------- */
+.resultados {
+  background: var(--branco);
+  border-bottom: 1px solid var(--rose-borda);
+}
+.resultados__cabecalho {
+  max-width: 62ch;
+  margin-bottom: clamp(2rem, 1rem + 3vw, 3rem);
+}
+.resultados__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+}
+@media (min-width: 760px) {
+  .resultados__lista { grid-template-columns: repeat(3, 1fr); }
+}
+
+.resultado { margin: 0; }
+.resultado__imagem {
+  position: relative;
+  border-radius: var(--raio-g);
+  overflow: hidden;
+  background: var(--rose-claro);
+  box-shadow: var(--sombra-suave);
+}
+.resultado__imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.resultado__etiqueta {
+  position: absolute;
+  left: 12px;
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: var(--arco);
+  background: rgba(250, 248, 245, .92);
+  color: var(--vinho);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.resultado__etiqueta--antes { top: 12px; }
+.resultado__etiqueta--depois { bottom: 12px; }
+
+.resultado figcaption { padding-top: 1rem; }
+.resultado__nome {
+  font-size: 1.35rem;
+  margin-bottom: .3rem;
+}
+.resultado figcaption p {
+  color: var(--cinza);
+  font-size: .95rem;
+  margin: 0;
+}
+
+.resultados__rodape {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem 1rem;
+  margin-top: clamp(2rem, 1rem + 3vw, 3rem);
+  padding-top: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  border-top: 1px solid var(--rose-borda);
+  color: var(--cinza);
+}
+
+/* ---------- 27. Desempenho: efeitos mais leves em telas pequenas ---------- */
+.cabecalho {
+  background: rgba(250, 248, 245, .97);   /* sólido o bastante para dispensar o blur */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+@media (min-width: 900px) {
+  /* o desfoque fica só onde o custo de composição não pesa */
+  .cabecalho {
+    background: rgba(250, 248, 245, .88);
+    backdrop-filter: saturate(160%) blur(10px);
+    -webkit-backdrop-filter: saturate(160%) blur(10px);
+  }
 }

@@ -30,10 +30,10 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/favicon.svg">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="assets/img/dra-marina-retrato.jpg" fetchpriority="high">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Fontes hospedadas aqui mesmo: nenhuma conexão externa. -->
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-variavel.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/nunito-sans-variavel.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/dra-marina-retrato.webp" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/estilos.css">
 
 <script>
@@ -68,6 +68,7 @@
         <li><a href="#inicio">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#resultados">Resultados</a></li>
         <li><a href="#consultorio">Consultório</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
@@ -103,6 +104,7 @@
         <li><a href="#inicio">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#resultados">Resultados</a></li>
         <li><a href="#consultorio">Consultório</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
@@ -149,10 +151,13 @@
 
       <figure class="abertura__figura">
         <div class="moldura-arco">
-          <img src="assets/img/dra-marina-retrato.jpg"
-               width="970" height="770"
-               alt="Retrato da Dra. Marina Vale sorrindo, com a mão apoiada no queixo."
-               fetchpriority="high" decoding="async">
+          <picture>
+            <source srcset="assets/img/dra-marina-retrato.webp" type="image/webp">
+            <img src="assets/img/dra-marina-retrato.jpg"
+                 width="970" height="770"
+                 alt="Retrato da Dra. Marina Vale sorrindo, com a mão apoiada no queixo."
+                 fetchpriority="high" decoding="async">
+          </picture>
         </div>
         <figcaption class="abertura__selo">
           <span class="abertura__selo-nome">Dra. Marina Vale</span>
@@ -203,9 +208,12 @@
 
       <figure class="sobre__figura revelar">
         <div class="moldura-arco moldura-arco--invertida">
-          <img src="assets/img/dra-marina-atendimento.jpg"
-               width="800" height="1000" loading="lazy" decoding="async"
-               alt="Dra. Marina Vale durante um atendimento, de máscara e luvas, concentrada no procedimento.">
+          <picture>
+            <source srcset="assets/img/dra-marina-atendimento.webp" type="image/webp">
+            <img src="assets/img/dra-marina-atendimento.jpg"
+                 width="800" height="1000" loading="lazy" decoding="async"
+                 alt="Dra. Marina Vale durante um atendimento, de máscara e luvas, concentrada no procedimento.">
+          </picture>
         </div>
       </figure>
 
@@ -381,6 +389,97 @@
     </div>
   </section>
 
+  <!-- ======================= RESULTADOS ======================= -->
+  <section class="secao resultados" id="resultados" aria-labelledby="resultados-titulo">
+    <div class="container">
+
+      <div class="resultados__cabecalho revelar">
+        <p class="sobretitulo">Resultados</p>
+        <h2 class="titulo-secao" id="resultados-titulo">Casos conduzidos pela Dra. Marina</h2>
+        <p class="texto-apoio">
+          Imagens reais, publicadas pela própria dentista com autorização dos pacientes.
+          Cada caso é único: o resultado depende da situação clínica de cada pessoa.
+        </p>
+        <p class="nota-pendente pendente-bloco">
+          <span class="pendente">A confirmar</span>
+          autorização por escrito para uso no site e as regras de publicidade do CRO-RJ.
+        </p>
+      </div>
+
+      <ul class="resultados__lista revelar">
+
+        <li>
+          <figure class="resultado">
+            <div class="resultado__imagem">
+              <picture>
+                <source srcset="assets/img/resultado-clareamento.webp" type="image/webp">
+                <img src="assets/img/resultado-clareamento.jpg" width="760" height="760"
+                     loading="lazy" decoding="async"
+                     alt="Antes e depois de um clareamento dental: na foto de cima os dentes estão amarelados; na de baixo, visivelmente mais claros.">
+              </picture>
+              <span class="resultado__etiqueta resultado__etiqueta--antes">Antes</span>
+              <span class="resultado__etiqueta resultado__etiqueta--depois">Depois</span>
+            </div>
+            <figcaption>
+              <h3 class="resultado__nome">Clareamento dental</h3>
+              <p>Clareamento realizado antes da confecção das coroas definitivas, acompanhando a resposta de cor do dente.</p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li>
+          <figure class="resultado">
+            <div class="resultado__imagem">
+              <picture>
+                <source srcset="assets/img/resultado-naturalidade.webp" type="image/webp">
+                <img src="assets/img/resultado-naturalidade.jpg" width="760" height="760"
+                     loading="lazy" decoding="async"
+                     alt="Antes e depois de um tratamento estético: na foto de cima os dentes da frente estão desalinhados e desgastados; na de baixo, com forma e cor regulares.">
+              </picture>
+              <span class="resultado__etiqueta resultado__etiqueta--antes">Antes</span>
+              <span class="resultado__etiqueta resultado__etiqueta--depois">Depois</span>
+            </div>
+            <figcaption>
+              <h3 class="resultado__nome">Naturalidade</h3>
+              <p>Finalização que preserva a aparência natural dos dentes, sem exageros de forma ou de cor.</p>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li>
+          <figure class="resultado">
+            <div class="resultado__imagem">
+              <picture>
+                <source srcset="assets/img/resultado-transformacao.webp" type="image/webp">
+                <img src="assets/img/resultado-transformacao.jpg" width="760" height="760"
+                     loading="lazy" decoding="async"
+                     alt="Antes e depois de uma reabilitação: na foto de cima os dentes estão escurecidos e desgastados; na de baixo, o sorriso aparece refeito.">
+              </picture>
+              <span class="resultado__etiqueta resultado__etiqueta--antes">Antes</span>
+              <span class="resultado__etiqueta resultado__etiqueta--depois">Depois</span>
+            </div>
+            <figcaption>
+              <h3 class="resultado__nome">Transformação do sorriso</h3>
+              <p>Caso concluído e entregue no consultório, devolvendo forma e função ao sorriso.</p>
+            </figcaption>
+          </figure>
+        </li>
+
+      </ul>
+
+      <p class="resultados__rodape">
+        Quer saber se o seu caso tem indicação parecida?
+        <a class="link-seta"
+           href="https://wa.me/5524981040504?text=Ol%C3%A1%2C%20Dra.%20Marina%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento."
+           target="_blank" rel="noopener">
+          Conversar pelo WhatsApp
+          <svg class="icone icone--seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </a>
+      </p>
+
+    </div>
+  </section>
+
   <!-- ======================= CONSULTÓRIO ======================= -->
   <section class="secao consultorio" id="consultorio" aria-labelledby="consultorio-titulo">
     <div class="container consultorio__grade">
@@ -409,7 +508,7 @@
 
         <div class="consultorio__acoes">
           <a class="botao botao--contorno"
-             href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Coronel%20Manoel%20Bernardes%2C%2045%20-%20Sala%20201"
+             href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Coronel%20Manoel%20Bernardes%2C%2045%20-%20Sala%20201%2C%20RJ"
              target="_blank" rel="noopener">
             <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
             Como chegar
@@ -535,6 +634,18 @@
         </details>
 
         <details class="pergunta">
+          <summary><span>Quanto custa um tratamento?</span></summary>
+          <div class="pergunta__resposta">
+            <p>
+              O valor depende do que cada caso precisa e só é definido depois da avaliação,
+              quando dá para examinar, conversar sobre as possibilidades e montar o plano
+              de tratamento. Pelo WhatsApp você já pode contar o que procura e combinar
+              essa primeira avaliação.
+            </p>
+          </div>
+        </details>
+
+        <details class="pergunta">
           <summary><span>Posso falar pelo Instagram?</span></summary>
           <div class="pergunta__resposta">
             <p>
@@ -612,6 +723,7 @@
         <li><a href="#inicio">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#resultados">Resultados</a></li>
         <li><a href="#consultorio">Consultório</a></li>
         <li><a href="#perguntas">Perguntas frequentes</a></li>
         <li><a href="#contato">Contato</a></li>
